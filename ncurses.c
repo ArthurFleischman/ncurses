@@ -2,10 +2,11 @@
 #include <ncurses/ncurses.h>
 int main(void)
 {
-	int w = 0, x = 0, y = 0, xmax = 0, ymax = 0; //initialize the variables
-	initscr();									 //init the screen
+	int w = 0, x = 0, y = 0, xmax = 0, ymax = 0; 			 //initialize the variables
+	initscr();							 //init the screen
+	curs_set(0);
 	keypad(stdscr, true);						 //eneable keypad
-	getmaxyx(stdscr, ymax, xmax);				 //get the maximum dimensions of the screen
+	getmaxyx(stdscr, ymax, xmax);					 //get the maximum dimensions of the screen
 
 	while (w != 'q')
 	{
